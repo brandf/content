@@ -32,7 +32,7 @@ type Post {
   id: ID!
   title: String!
   author: User @relation(name: "AuthorPosts")
-  comment: Comment @relation(name: "PostComments")
+  comments: [Comment!]! @relation(name: "PostComments")
 }
 
 type Comment {
